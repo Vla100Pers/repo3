@@ -1,4 +1,4 @@
-name: HTML Export
+name: HTML generate
 
 on:
  workflow_call:
