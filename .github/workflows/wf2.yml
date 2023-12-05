@@ -1,0 +1,19 @@
+name: HTML Export
+
+on:
+ workflow_call:
+    inputs:
+      repo_name:
+        required: true
+        type: string
+      branch_name:
+        required: true
+        type: string
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print context variables
+      run: |
+        echo "Repository Name: $repo_name"
+        echo "Branch Name: $branch_name"
