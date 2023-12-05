@@ -16,4 +16,4 @@ jobs:
     - name: Print context variables
       run: |
         echo "Repository Name: ${{ inputs.repo_name }}
-        echo "Branch Name: ${{ branch_name }}
+        echo "Branch Name: ${{ inputs.branch_name }}
