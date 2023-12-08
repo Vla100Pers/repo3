@@ -1,4 +1,4 @@
-name: HTML generate
+name: HTML Export
 
 on:
  workflow_call:
@@ -12,8 +12,28 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
     steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Checkout called repo
+      if:   ${{ inputs.repo_name != 'Vla100Pers/repo2'}}
+      uses: actions/checkout@v4
+      with:
+        repository:  Vla100Pers/repo2
+#        token: ${{ secrets.SEC1 }}
+        path: repo2
+        ref: main
     - name: Print context variables
       run: |
-        echo "Repository Name: ${{ inputs.repo_name }}
-        echo "Branch Name: ${{ inputs.branch_name }}
+        echo "Repository Name:  ${{ github.repository }}"
+        echo "Branch Name: ${{ github.ref_name }}"
+        echo "Current path: $(pwd)"
+        set
+    - name: List files in the repository
+      run: |
+        ls ${{ github.workspace }}
+        ls -la Archi_html_generator/
