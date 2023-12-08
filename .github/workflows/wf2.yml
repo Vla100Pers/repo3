@@ -23,9 +23,9 @@ jobs:
       if:   ${{ inputs.repo_name != 'Vla100Pers/repo2'}}
       uses: actions/checkout@v4
       with:
-        repository:  Vla100Pers/repo2
+        repository:  Vla100Pers/repo3
 #        token: ${{ secrets.SEC1 }}
-        path: repo2
+        path: repo3
         ref: main
     - name: Print context variables
       run: |
