@@ -54,4 +54,4 @@ jobs:
         git commit -m "Copy test_repo1 from repo1 to repo3"
         git push
       env:
-        GITHUB_TOKEN: ${{ secrets.SEC1 }} # Use the PAT for push
+        GITHUB_TOKEN: ${{ secrets.SEC2 }} # Use the PAT for push
