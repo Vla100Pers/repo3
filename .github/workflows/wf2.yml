@@ -35,7 +35,11 @@ jobs:
 #        token: ${{ secrets.SEC1 }}
         path: repo3
         ref: main
-    - name: Called repo files
-      run: |
-         ls ${{ github.workspace }}
-         ls Vla100Pers/repo3
+    - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+#    - name: Called repo files
+#      run: |
+#         ls ${{ github.workspace }}
+#         ls Vla100Pers/repo3
