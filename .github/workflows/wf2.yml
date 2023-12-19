@@ -18,15 +18,6 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v4
-
-    - name: Checkout called repo
-      if:   ${{ inputs.repo_name != 'Vla100Pers/repo2'}}
-      uses: actions/checkout@v4
-      with:
-        repository:  Vla100Pers/repo3
-#        token: ${{ secrets.SEC1 }}
-        path: repo3
-        ref: main
     - name: Print context variables
       run: |
         echo "Repository Name:  ${{ github.repository }}"
@@ -36,4 +27,14 @@ jobs:
     - name: List files in the repository
       run: |
         ls ${{ github.workspace }}
-#        ls -la Archi_html_generator/
+    - name: Checkout called repo
+#      if:   ${{ inputs.repo_name != 'Vla100Pers/repo2'}}
+      uses: actions/checkout@v4
+      with:
+        repository:  Vla100Pers/repo3
+#        token: ${{ secrets.SEC1 }}
+        path: repo3
+        ref: main
+        run: |
+         ls ${{ github.workspace }}
+         ls Vla100Pers/repo3
