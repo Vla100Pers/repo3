@@ -35,6 +35,11 @@ jobs:
 #        token: ${{ secrets.SEC1 }}
         path: repo3
         ref: main
+
+    - name: Copy test_repo1 folder from repo1 to repo3
+      run: |
+        cp -r repo1/test_repo1 repo3/
+        
     - name: Called repo files
       run: |
         echo "Listing files in repo3:"
