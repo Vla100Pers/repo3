@@ -1,4 +1,4 @@
-name: HTML Export
+name: called wf2
 
 on:
  workflow_call:
