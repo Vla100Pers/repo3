@@ -32,8 +32,8 @@ jobs:
         echo "Repository Name:  ${{ github.repository }}"
         echo "Branch Name: ${{ github.ref_name }}"
         echo "Current path: $(pwd)"
-        set
+#        set
     - name: List files in the repository
       run: |
         ls ${{ github.workspace }}
-        ls -la Archi_html_generator/
+#        ls -la Archi_html_generator/
