@@ -35,6 +35,7 @@ jobs:
 #        token: ${{ secrets.SEC1 }}
         path: repo3
         ref: main
-        run: |
+    - name: Called repo files
+      run: |
          ls ${{ github.workspace }}
          ls Vla100Pers/repo3
