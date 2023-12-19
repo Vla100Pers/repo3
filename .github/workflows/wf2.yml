@@ -38,7 +38,7 @@ jobs:
 
     - name: Copy test_repo1 folder from repo1 to repo3
       run: |
-        cp -r repo1/test_repo1 repo3/
+        cp -r test_repo1 repo3/
         
     - name: Called repo files
       run: |
