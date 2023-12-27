@@ -46,13 +46,13 @@ jobs:
         echo "Listing files in repo3:"
         ls -lah repo3
         
-    - name: Commit and Push Changes to repo3
-      run: |
-        cd repo3
-        git config user.name "Vla100Pers"
-        git config user.email "vlastimil.polacek@gmail.com"
-        git add .
-        git commit -m "Copy test_repo1 from repo1 to repo3"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.SEC1 }} # Use the PAT for push
+#    - name: Commit and Push Changes to repo3
+#      run: |
+#        cd repo3
+#        git config user.name "Vla100Pers"
+#        git config user.email "vlastimil.polacek@gmail.com"
+#        git add .
+#        git commit -m "Copy test_repo1 from repo1 to repo3"
+#        git push
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.SEC1 }} # Use the PAT for push
