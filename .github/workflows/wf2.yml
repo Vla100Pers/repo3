@@ -28,14 +28,14 @@ jobs:
     - name: List files in the repository
       run: |
         ls -lah ${{ github.workspace }}
-#    - name: Checkout called repo
+    - name: Checkout called repo
 #      if:   ${{ inputs.repo_name != 'Vla100Pers/repo2'}}
 #      uses: actions/checkout@v4
-#      with:
-#        repository: 'Vla100Pers/repo3'
+      with:
+        repository: 'Vla100Pers/repo3'
 #        token: ${{ secrets.SEC1 }}
-#        path: repo3
-#        ref: main
+        path: repo3
+        ref: main
 
 #    - name: Copy test_repo1 folder from repo1 to repo3
 #      run: |
