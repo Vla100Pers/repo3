@@ -30,7 +30,7 @@ jobs:
         ls -lah ${{ github.workspace }}
     - name: Checkout called repo
 #      if:   ${{ inputs.repo_name != 'Vla100Pers/repo2'}}
-#      uses: actions/checkout@v4
+      uses: actions/checkout@v4
       with:
         repository: 'Vla100Pers/repo3'
 #        token: ${{ secrets.SEC1 }}
