@@ -28,7 +28,7 @@ jobs:
     - name: List files in the repository
       run: |
         ls -lah ${{ github.workspace }}
-    - name: Checkout called repo
+#    - name: Checkout called repo
 #      if:   ${{ inputs.repo_name != 'Vla100Pers/repo2'}}
 #      uses: actions/checkout@v4
 #      with:
